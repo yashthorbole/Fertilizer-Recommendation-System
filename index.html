@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fertilizer Recommendation System</title>
+</head>
+<body>
+
+    <h1>Fertilizer Recommendation System</h1>
+
+    <form method="post" action="/predict">
+        <label>Nitrogen</label><br>
+        <input type="text" name="Nitrogen"><br><br>
+
+        <label>Potassium</label><br>
+        <input type="text" name="Potassium"><br><br>
+
+        <label>Phosphorous</label><br>
+        <input type="text" name="Phosphorous"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+
+        {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+    </form>
+
+</body>
+</html>
